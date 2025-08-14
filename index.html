@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alfajorgasm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Colores principales */
         :root {
-            --crema: #FFF3E0;           /* Fondo crema */
-            --chocolate: #3E1F0D;       /* Chocolate intenso para detalles */
-            --marron: #5C3A21;          /* Marrón oscuro secundario */
+            --crema: #FFF3E0;
+            --chocolate: #3E1F0D;
+            --marron: #5C3A21;
+            --dorado: #FFD700;
         }
 
-        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
 
         body {
             background-color: var(--crema);
             color: var(--chocolate);
-            line-height: 1.6;
         }
 
         header {
             background-color: var(--chocolate);
             color: var(--crema);
+            padding: 1.5rem 1rem;
             text-align: center;
-            padding: 2rem 1rem;
             font-size: 2.5rem;
-            font-weight: bold;
+            font-weight: 700;
             letter-spacing: 2px;
         }
 
@@ -41,73 +40,203 @@
             display: flex;
             justify-content: center;
             padding: 1rem 0;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: var(--crema);
             text-decoration: none;
             margin: 0 1.5rem;
-            font-weight: bold;
+            font-weight: 700;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #FFD700; /* Oro como efecto al pasar el mouse */
+            color: var(--dorado);
         }
 
         main {
             padding: 2rem 1rem;
-            text-align: center;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        h2 {
-            color: var(--chocolate);
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        p {
+        .hero p {
+            font-size: 1.2rem;
+            color: #5C3A21;
+        }
+
+        .btn-primary {
+            background-color: var(--chocolate);
+            color: var(--crema);
+            border: none;
+            padding: 0.8rem 2rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--marron);
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--chocolate);
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--crema);
+            border: 2px solid var(--chocolate);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 1rem 0;
+            color: var(--chocolate);
+        }
+
+        .card p {
+            padding: 0 1rem 1rem;
+            color: #5C3A21;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .about img {
+            width: 300px;
+            border-radius: 15px;
+        }
+
+        .about-text {
             max-width: 600px;
-            margin: 0 auto 1.5rem auto;
         }
 
         footer {
             background-color: var(--marron);
             color: var(--crema);
             text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
+            padding: 2rem 1rem;
         }
 
-        button {
-            background-color: var(--chocolate);
-            color: var(--crema);
-            border: none;
-            padding: 0.8rem 1.5rem;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+        footer p {
+            margin-bottom: 0.5rem;
         }
 
-        button:hover {
-            background-color: var(--marron);
+        @media(max-width: 768px){
+            .about {
+                flex-direction: column;
+            }
+            .about img {
+                width: 80%;
+            }
         }
     </style>
 </head>
 <body>
     <header>Alfajorgasm</header>
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Contacto</a>
+        <a href="#productos">Productos</a>
+        <a href="#sobre-nosotros">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
     </nav>
+
     <main>
-        <h2>Bienvenido a Alfajorgasm</h2>
-        <p>Descubre los alfajores más deliciosos y artesanales. Cada bocado es una explosión de sabor que te hará volver por más.</p>
-        <button>Ver Productos</button>
+        <section class="hero">
+            <h1>Bienvenido a Alfajorgasm</h1>
+            <p>Los alfajores más deliciosos, artesanales y llenos de amor en cada bocado.</p>
+            <button class="btn-primary">Ver Productos</button>
+        </section>
+
+        <section id="productos">
+            <h2>Nuestros Productos</h2>
+            <div class="products">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Alfajor+Chocolate" alt="Alfajor Chocolate">
+                    <h3>Alfajor de Chocolate</h3>
+                    <p>Relleno cremoso de chocolate con cobertura de cacao puro. ¡Irresistible!</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Alfajor+Dulce+de+Leche" alt="Alfajor Dulce de Leche">
+                    <h3>Alfajor de Dulce de Leche</h3>
+                    <p>Clásico y delicioso, relleno de dulce de leche artesanal y cobertura de chocolate.</p>
+                </div>
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Alfajor+Blanco" alt="Alfajor Blanco">
+                    <h3>Alfajor Blanco</h3>
+                    <p>Suave y elegante, relleno de crema blanca y cubierto con chocolate blanco.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros">
+            <h2>Sobre Nosotros</h2>
+            <div class="about">
+                <img src="https://via.placeholder.com/300x300.png?text=Fábrica+Alfajorgasm" alt="Nuestra Fábrica">
+                <div class="about-text">
+                    <p>En Alfajorgasm nos dedicamos a crear alfajores artesanales con los mejores ingredientes. Cada alfajor es preparado con cuidado y pasión para brindar un sabor inigualable. Nuestra misión es hacer que cada bocado sea una experiencia inolvidable.</p>
+                    <button class="btn-primary">Contáctanos</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p style="text-align:center;">Dirección: Avenida Francisco Esteban Gómez, urbanización Pinamar, 6301 Mariño</p>
+            <p style="text-align:center;">Teléfono: +584128681660</p>
+            <p style="text-align:center;">Correo: contacto@alfajorgasm.com</p>
+        </section>
     </main>
+
     <footer>
-        &copy; 2025 Alfajorgasm. Todos los derechos reservados.
+        <p>&copy; 2025 Alfajorgasm. Todos los derechos reservados.</p>
+        <p>Avenida Francisco Esteban Gómez, urbanización Pinamar, 6301 Mariño | +584128681660</p>
     </footer>
 </body>
 </html>
+
