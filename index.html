@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfajorgasm</title>
+    <style>
+        /* Colores principales */
+        :root {
+            --crema: #FFF3E0;           /* Fondo crema */
+            --chocolate: #3E1F0D;       /* Chocolate intenso para detalles */
+            --marron: #5C3A21;          /* Marrón oscuro secundario */
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: var(--crema);
+            color: var(--chocolate);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--chocolate);
+            color: var(--crema);
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: var(--marron);
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: var(--crema);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #FFD700; /* Oro como efecto al pasar el mouse */
+        }
+
+        main {
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--chocolate);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            max-width: 600px;
+            margin: 0 auto 1.5rem auto;
+        }
+
+        footer {
+            background-color: var(--marron);
+            color: var(--crema);
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        button {
+            background-color: var(--chocolate);
+            color: var(--crema);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--marron);
+        }
+    </style>
+</head>
+<body>
+    <header>Alfajorgasm</header>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+        <h2>Bienvenido a Alfajorgasm</h2>
+        <p>Descubre los alfajores más deliciosos y artesanales. Cada bocado es una explosión de sabor que te hará volver por más.</p>
+        <button>Ver Productos</button>
+    </main>
+    <footer>
+        &copy; 2025 Alfajorgasm. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
